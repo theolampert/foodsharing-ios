@@ -1,0 +1,5 @@
+github "layoutBox/FlexLayout"
+github "layoutBox/PinLayout"
+github "Alamofire/Alamofire" ~> 4.7
+github "ReSwift/ReSwift"
+
