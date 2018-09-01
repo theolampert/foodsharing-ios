@@ -1,6 +1,6 @@
 ## Foodsharing iOS
 
-A proof of concept foodhsaring client written in swift.
+A proof of concept foodsharing client written in swift.
 
 ### Requirements
 
