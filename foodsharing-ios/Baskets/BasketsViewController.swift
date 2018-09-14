@@ -9,14 +9,19 @@
 import UIKit
 
 class BasketsViewController: UIViewController {
+    let basketsView = BasketsView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Baskets"
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
+            self.basketsView.name.value = "heello"
+        }
+
     }
     
     override func loadView() {
-        let label = UILabel()
-        label.text = "baskets"
-        view = label
+        view = basketsView
     }
 }

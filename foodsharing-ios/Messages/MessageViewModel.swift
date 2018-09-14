@@ -34,10 +34,24 @@ class MessageViewModel: MessageViewModelType {
     }
     
     func getConversation(id: String) {
+        if let cachedConversation = UserDefaults.standard.object(forKey: "message-" + id) {
+            do {
+                let jsonDecoder = JSONDecoder()
+                let e = try jsonDecoder.decode(ConversationDetail.self, from: cachedConversation as! Data)
+                self.messages = e.messages
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
         webservice.getConversation(conversationID: id) { conversation in
             self.messages = conversation.messages
-//            self.member = conversation.member
-            
+            do {
+                let jsonEncoder = JSONEncoder()
+                let e = try jsonEncoder.encode(conversation)
+                UserDefaults.standard.set(e, forKey: "message-" + id)
+            } catch let error {
+                print(error.localizedDescription)
+            }
         }
     }
     

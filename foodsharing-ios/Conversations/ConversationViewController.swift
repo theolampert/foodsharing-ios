@@ -7,52 +7,60 @@
 //
 
 import UIKit
+import ReSwift
 
 
-class ConversationViewController: UIViewController {
+class ConversationViewController: UIViewController, StoreSubscriber {
     private var viewModel: ConversationViewModel = ConversationViewModel(webservice: FSWebService())
     private var conversationView: ConversationView = ConversationView()
     
+    override func viewWillAppear(_ animated: Bool) {
+        store.subscribe(self)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        store.unsubscribe(self)
+    }
+    
+    func newState(state: State) {
+        conversationView.tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Conversations"
 
         conversationView.tableView.register(ConversationCell.self, forCellReuseIdentifier: ConversationCell.reuseIdentifier)
         conversationView.tableView.dataSource = self
         conversationView.tableView.delegate = self
 
         viewModel.delegate = self
-        viewModel.getConversations()
+        store.dispatch(RequestConversations)
     }
     
     override func loadView() {
-        self.title = "Conversations"
+        title = "Conversations"
         view = conversationView
     }
 }
 
 extension ConversationViewController: ConversationsDelegate {
-    func conversationsDidChange() {
-        self.conversationView.layoutConversations(conversations: viewModel.conversations)
-    }
-
     func messageViewPushed() {
-        self.navigationController?.pushViewController(MessageViewController(id: viewModel.messageView), animated: true)
+        navigationController?.pushViewController(MessageViewController(id: viewModel.messageView), animated: true)
     }
 }
 
 extension ConversationViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.pushMessageView(id: self.viewModel.conversations[indexPath.row].id)
+        viewModel.pushMessageView(id: store.state.conversations[indexPath.row].id)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel.conversations.count
+        return store.state.conversations.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ConversationCell.reuseIdentifier, for: indexPath) as! ConversationCell
-        cell.configure(conversation: self.viewModel.conversations[indexPath.row])
+        cell.configure(conversation: store.state.conversations[indexPath.row])
         
         return cell
     }

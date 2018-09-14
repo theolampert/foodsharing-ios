@@ -9,6 +9,7 @@ import UIKit
 
 class MessageViewController: UIViewController {
     let viewModel: MessageViewModel = MessageViewModel(webservice: FSWebService())
+    let messageView: MessageView = MessageView()
     var id: String
 
     override func viewDidLoad() {
@@ -19,9 +20,7 @@ class MessageViewController: UIViewController {
     }
     
     override func loadView() {
-        let label = UILabel()
-        label.text = "message"
-        view = label
+        view = messageView
     }
     
     init(id: String) {
@@ -36,6 +35,6 @@ class MessageViewController: UIViewController {
 
 extension MessageViewController: MessageDelegate {
     func conversationDidChange() {
-        print(viewModel.messages)
+        self.messageView.renderMessages(messages: viewModel.messages)
     }
 }

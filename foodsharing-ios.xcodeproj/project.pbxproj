@@ -10,6 +10,7 @@
 		E405E8432139CAED00952FEC /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405E8422139CAED00952FEC /* ConversationCell.swift */; };
 		E405E8462139D3FD00952FEC /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405E8452139D3FD00952FEC /* MessageViewController.swift */; };
 		E405E8482139DF0E00952FEC /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405E8472139DF0E00952FEC /* MessageViewModel.swift */; };
+		E405E84A213ACFEE00952FEC /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E405E849213ACFEE00952FEC /* MessageView.swift */; };
 		E4687C9C2133E61200B2992D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687C9B2133E61200B2992D /* MainViewController.swift */; };
 		E4687C9E2133E7E900B2992D /* FSWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687C9D2133E7E900B2992D /* FSWebService.swift */; };
 		E4687CA02133F30000B2992D /* ConversationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687C9F2133F30000B2992D /* ConversationView.swift */; };
@@ -19,7 +20,6 @@
 		E4687CA82135C86C00B2992D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA72135C86C00B2992D /* ConversationViewController.swift */; };
 		E4687CAA2135C89200B2992D /* BasketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA92135C89200B2992D /* BasketsViewController.swift */; };
 		E4687CAC2135CE7400B2992D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CAB2135CE7400B2992D /* Style.swift */; };
-		E47FC56E21371B9300CF8F87 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47FC56D21371B9300CF8F87 /* LoginViewModel.swift */; };
 		E47FC5702137201200CF8F87 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47FC56F2137201200CF8F87 /* ConversationViewModel.swift */; };
 		E48326D92131893700DD7A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326D82131893700DD7A7C /* AppDelegate.swift */; };
 		E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326DA2131893700DD7A7C /* LoginViewController.swift */; };
@@ -32,6 +32,18 @@
 		E4832700213190CF00DD7A7C /* PinLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E48326FE213190CF00DD7A7C /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E48327022131A73A00DD7A7C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48327012131A73A00DD7A7C /* Alamofire.framework */; };
 		E48327032131A73A00DD7A7C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E48327012131A73A00DD7A7C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4BAF27C213D4690007747E4 /* BasketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BAF27B213D4690007747E4 /* BasketsView.swift */; };
+		E4D90FD3213BD8DD00ED7385 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */; };
+		E4D90FD4213BD8DD00ED7385 /* ReSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4D90FD6213BD8FE00ED7385 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D90FD5213BD8FE00ED7385 /* Store.swift */; };
+		E4D90FDA213C69C200ED7385 /* Actions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D90FD9213C69C200ED7385 /* Actions.swift */; };
+		E4D90FDC213C6A2B00ED7385 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D90FDB213C6A2B00ED7385 /* Reducers.swift */; };
+		E4D90FDE213C742700ED7385 /* FSWebServiceTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D90FDD213C742700ED7385 /* FSWebServiceTypes.swift */; };
+		E4D90FE0213C79FC00ED7385 /* FSWebServiceCoders.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4D90FDF213C79FC00ED7385 /* FSWebServiceCoders.swift */; };
+		E4D90FE2213D3B0E00ED7385 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FE1213D3B0E00ED7385 /* RxSwift.framework */; };
+		E4D90FE3213D3B0E00ED7385 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FE1213D3B0E00ED7385 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E4D90FE5213D3C4A00ED7385 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FE4213D3C4A00ED7385 /* RxCocoa.framework */; };
+		E4D90FE6213D3C4A00ED7385 /* RxCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E4D90FE4213D3C4A00ED7385 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +63,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E4D90FE6213D3C4A00ED7385 /* RxCocoa.framework in Embed Frameworks */,
+				E4D90FE3213D3B0E00ED7385 /* RxSwift.framework in Embed Frameworks */,
 				E4832700213190CF00DD7A7C /* PinLayout.framework in Embed Frameworks */,
+				E4D90FD4213BD8DD00ED7385 /* ReSwift.framework in Embed Frameworks */,
 				E48327032131A73A00DD7A7C /* Alamofire.framework in Embed Frameworks */,
 				E48326FA21318ABE00DD7A7C /* FlexLayout.framework in Embed Frameworks */,
 			);
@@ -64,6 +79,7 @@
 		E405E8422139CAED00952FEC /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
 		E405E8452139D3FD00952FEC /* MessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		E405E8472139DF0E00952FEC /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		E405E849213ACFEE00952FEC /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		E4687C9B2133E61200B2992D /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E4687C9D2133E7E900B2992D /* FSWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSWebService.swift; sourceTree = "<group>"; };
 		E4687C9F2133F30000B2992D /* ConversationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationView.swift; sourceTree = "<group>"; };
@@ -73,7 +89,6 @@
 		E4687CA72135C86C00B2992D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		E4687CA92135C89200B2992D /* BasketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsViewController.swift; sourceTree = "<group>"; };
 		E4687CAB2135CE7400B2992D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E47FC56D21371B9300CF8F87 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		E47FC56F2137201200CF8F87 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		E48326D52131893700DD7A7C /* foodsharing-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodsharing-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48326D82131893700DD7A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +102,15 @@
 		E48326FC21318B1D00DD7A7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		E48326FE213190CF00DD7A7C /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
 		E48327012131A73A00DD7A7C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		E4BAF27B213D4690007747E4 /* BasketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsView.swift; sourceTree = "<group>"; };
+		E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		E4D90FD5213BD8FE00ED7385 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		E4D90FD9213C69C200ED7385 /* Actions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actions.swift; sourceTree = "<group>"; };
+		E4D90FDB213C6A2B00ED7385 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
+		E4D90FDD213C742700ED7385 /* FSWebServiceTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSWebServiceTypes.swift; sourceTree = "<group>"; };
+		E4D90FDF213C79FC00ED7385 /* FSWebServiceCoders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSWebServiceCoders.swift; sourceTree = "<group>"; };
+		E4D90FE1213D3B0E00ED7385 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E4D90FE4213D3C4A00ED7385 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +118,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4D90FE5213D3C4A00ED7385 /* RxCocoa.framework in Frameworks */,
+				E4D90FE2213D3B0E00ED7385 /* RxSwift.framework in Frameworks */,
 				E48326FF213190CF00DD7A7C /* PinLayout.framework in Frameworks */,
+				E4D90FD3213BD8DD00ED7385 /* ReSwift.framework in Frameworks */,
 				E48327022131A73A00DD7A7C /* Alamofire.framework in Frameworks */,
 				E48326F921318ABE00DD7A7C /* FlexLayout.framework in Frameworks */,
 			);
@@ -122,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				E405E8452139D3FD00952FEC /* MessageViewController.swift */,
+				E405E849213ACFEE00952FEC /* MessageView.swift */,
 				E405E8472139DF0E00952FEC /* MessageViewModel.swift */,
 			);
 			path = Messages;
@@ -131,7 +159,6 @@
 			isa = PBXGroup;
 			children = (
 				E48326FC21318B1D00DD7A7C /* LoginView.swift */,
-				E47FC56D21371B9300CF8F87 /* LoginViewModel.swift */,
 				E48326DA2131893700DD7A7C /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -161,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				E4687CA92135C89200B2992D /* BasketsViewController.swift */,
+				E4BAF27B213D4690007747E4 /* BasketsView.swift */,
 			);
 			path = Baskets;
 			sourceTree = "<group>";
@@ -176,7 +204,9 @@
 		E47FC56C21371AD900CF8F87 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E4D90FDF213C79FC00ED7385 /* FSWebServiceCoders.swift */,
 				E4687C9D2133E7E900B2992D /* FSWebService.swift */,
+				E4D90FDD213C742700ED7385 /* FSWebServiceTypes.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -184,6 +214,9 @@
 		E48326CC2131893700DD7A7C = {
 			isa = PBXGroup;
 			children = (
+				E4D90FE4213D3C4A00ED7385 /* RxCocoa.framework */,
+				E4D90FE1213D3B0E00ED7385 /* RxSwift.framework */,
+				E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */,
 				E48327012131A73A00DD7A7C /* Alamofire.framework */,
 				E48326FE213190CF00DD7A7C /* PinLayout.framework */,
 				E48326F821318ABE00DD7A7C /* FlexLayout.framework */,
@@ -206,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				E48326D82131893700DD7A7C /* AppDelegate.swift */,
+				E4D90FD5213BD8FE00ED7385 /* Store.swift */,
+				E4D90FDB213C6A2B00ED7385 /* Reducers.swift */,
+				E4D90FD9213C69C200ED7385 /* Actions.swift */,
 				E4687CA1213400F200B2992D /* RootViewController.swift */,
 				E405E8442139D3D700952FEC /* Messages */,
 				E47FC56C21371AD900CF8F87 /* Services */,
@@ -331,19 +367,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4687CA02133F30000B2992D /* ConversationView.swift in Sources */,
+				E4D90FDE213C742700ED7385 /* FSWebServiceTypes.swift in Sources */,
+				E4D90FD6213BD8FE00ED7385 /* Store.swift in Sources */,
 				E4687C9E2133E7E900B2992D /* FSWebService.swift in Sources */,
 				E4687CA6213467DE00B2992D /* Constant.swift in Sources */,
 				E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */,
+				E4D90FDA213C69C200ED7385 /* Actions.swift in Sources */,
+				E4D90FE0213C79FC00ED7385 /* FSWebServiceCoders.swift in Sources */,
 				E47FC5702137201200CF8F87 /* ConversationViewModel.swift in Sources */,
 				E4687CA82135C86C00B2992D /* ConversationViewController.swift in Sources */,
 				E4687CA2213400F200B2992D /* RootViewController.swift in Sources */,
 				E48326D92131893700DD7A7C /* AppDelegate.swift in Sources */,
 				E4687CAC2135CE7400B2992D /* Style.swift in Sources */,
 				E405E8482139DF0E00952FEC /* MessageViewModel.swift in Sources */,
-				E47FC56E21371B9300CF8F87 /* LoginViewModel.swift in Sources */,
 				E405E8462139D3FD00952FEC /* MessageViewController.swift in Sources */,
+				E405E84A213ACFEE00952FEC /* MessageView.swift in Sources */,
 				E4687C9C2133E61200B2992D /* MainViewController.swift in Sources */,
+				E4D90FDC213C6A2B00ED7385 /* Reducers.swift in Sources */,
 				E48326FD21318B1D00DD7A7C /* LoginView.swift in Sources */,
+				E4BAF27C213D4690007747E4 /* BasketsView.swift in Sources */,
 				E4687CAA2135C89200B2992D /* BasketsViewController.swift in Sources */,
 				E4687CA42134325800B2992D /* SplashViewController.swift in Sources */,
 				E405E8432139CAED00952FEC /* ConversationCell.swift in Sources */,

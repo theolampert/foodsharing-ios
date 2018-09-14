@@ -23,7 +23,6 @@ import PinLayout
 class ConversationView: UIView {
     private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     let tableView = UITableView()
-    private var conversations: [Conversation] = []
 
     init() {
         super.init(frame: .zero)
@@ -40,14 +39,11 @@ class ConversationView: UIView {
     }
     
     func layoutConversations (conversations: [Conversation]) {
-        activityIndicator.stopAnimating()
-        self.conversations = conversations
         tableView.reloadData()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        activityIndicator.startAnimating()
         
         tableView.pin.all()
         activityIndicator.pin.all()

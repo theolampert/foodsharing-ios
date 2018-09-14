@@ -5,16 +5,18 @@
 //  Created by Theo Lampert on 29.08.18.
 //  Copyright © 2018 Theo Lampert. All rights reserved.
 //
+import UIKit
+
+
 protocol ConversationsDelegate {
-    func conversationsDidChange()
     func messageViewPushed()
 }
 
 protocol ConversationViewModelType {
-    var conversations: [Conversation] { get }
     var messageView: String { get set }
     var delegate: ConversationsDelegate? { get set }
 }
+
 
 class ConversationViewModel: ConversationViewModelType {
     private(set) var webservice: FSWebService!
@@ -23,18 +25,6 @@ class ConversationViewModel: ConversationViewModelType {
     var messageView: String = "" {
         didSet {
             delegate?.messageViewPushed()
-        }
-    }
-    
-    var conversations: [Conversation] = [] {
-        didSet {
-            delegate?.conversationsDidChange()
-        }
-    }
-    
-    func getConversations() {
-        webservice.getConversations { conversations in
-            self.conversations = conversations
         }
     }
     

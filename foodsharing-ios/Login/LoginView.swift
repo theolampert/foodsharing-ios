@@ -12,26 +12,29 @@ import FlexLayout
 import PinLayout
 
 class LoginView: UIView {
-    fileprivate let rootFlexContainer = UIView()
+    let rootFlexContainer = UIView()
     let submitButton = UIButton()
     let emailInput = UITextField()
     let passwordInput = UITextField()
+    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
     
     init() {
         super.init(frame: .zero)
-        backgroundColor = Style.scotchMist
-        
+        backgroundColor = Style.white
         let iconImageView = UIImageView(image: UIImage(named: "Logo"))
         
-        submitButton.backgroundColor = Style.brownBramble
+        activityIndicator.frame = bounds
+        activityIndicator.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2)
+        
+        submitButton.backgroundColor = Style.apple
         submitButton.setTitle("Login", for: UIControlState.normal)
         
-        emailInput.placeholder = "your@email.com"
+        emailInput.placeholder = "Email"
         emailInput.backgroundColor = UIColor.white
         emailInput.keyboardType = UIKeyboardType.emailAddress
         emailInput.autocapitalizationType = UITextAutocapitalizationType.none
         
-        passwordInput.placeholder = "**********"
+        passwordInput.placeholder = "Password"
         passwordInput.backgroundColor = UIColor.white
         passwordInput.isSecureTextEntry = true
         
@@ -67,15 +70,17 @@ class LoginView: UIView {
         }
 
         addSubview(rootFlexContainer)
+        addSubview(activityIndicator)
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         
+        activityIndicator.pin.all(pin.safeArea)
         rootFlexContainer.pin.all(pin.safeArea)
         rootFlexContainer.flex.layout()
     }
