@@ -9,7 +9,7 @@
 import UIKit
 
 class SplashViewController: UIViewController {
-    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+    private let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
     private let appDelegate: AppDelegate = (UIApplication.shared.delegate as? AppDelegate)!
 
     func loadSessionCookie() -> Bool {

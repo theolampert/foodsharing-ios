@@ -21,7 +21,7 @@ import PinLayout
 
 
 class ConversationView: UIView {
-    private let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    private let activityIndicator = UIActivityIndicatorView(style: .gray)
     let tableView = UITableView()
 
     init() {

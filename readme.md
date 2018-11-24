@@ -4,9 +4,9 @@ A proof of concept foodsharing client written in swift.
 
 ### Requirements
 
-- OSX 10.13.6
-- Xcode 9.4.1
-- Swift 4.1.2
+- OSX 10.14
+- Xcode 10.1
+- Swift 4.2.1
 
 ### Installation
 

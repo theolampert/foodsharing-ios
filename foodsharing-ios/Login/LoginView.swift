@@ -16,7 +16,7 @@ class LoginView: UIView {
     let submitButton = UIButton()
     let emailInput = UITextField()
     let passwordInput = UITextField()
-    let activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     
     init() {
         super.init(frame: .zero)
@@ -27,7 +27,7 @@ class LoginView: UIView {
         activityIndicator.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.2)
         
         submitButton.backgroundColor = Style.apple
-        submitButton.setTitle("Login", for: UIControlState.normal)
+        submitButton.setTitle("Login", for: UIControl.State.normal)
         
         emailInput.placeholder = "Email"
         emailInput.backgroundColor = UIColor.white

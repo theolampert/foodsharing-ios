@@ -317,9 +317,11 @@
 				TargetAttributes = {
 					E48326D42131893700DD7A7C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 					};
 					E48326E82131893900DD7A7C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = E48326D42131893700DD7A7C;
 					};
 				};
@@ -542,7 +544,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theolampert.foodsharing-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -564,7 +566,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theolampert.foodsharing-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -584,7 +586,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theolampert.foodsharing-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodsharing-ios.app/foodsharing-ios";
 			};
@@ -605,7 +607,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.theolampert.foodsharing-iosTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/foodsharing-ios.app/foodsharing-ios";
 			};
