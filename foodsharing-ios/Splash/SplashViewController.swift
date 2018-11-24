@@ -32,7 +32,6 @@ class SplashViewController: UIViewController {
         if hasSession {
             verifySession()
         } else {
-            // navigate to login screen
             self.activityIndicator.stopAnimating()
             appDelegate.window?.rootViewController = LoginViewController()
         }

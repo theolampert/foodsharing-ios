@@ -20,7 +20,6 @@
 		E4687CA82135C86C00B2992D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA72135C86C00B2992D /* ConversationViewController.swift */; };
 		E4687CAA2135C89200B2992D /* BasketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA92135C89200B2992D /* BasketsViewController.swift */; };
 		E4687CAC2135CE7400B2992D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CAB2135CE7400B2992D /* Style.swift */; };
-		E47FC5702137201200CF8F87 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47FC56F2137201200CF8F87 /* ConversationViewModel.swift */; };
 		E48326D92131893700DD7A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326D82131893700DD7A7C /* AppDelegate.swift */; };
 		E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326DA2131893700DD7A7C /* LoginViewController.swift */; };
 		E48326E02131893900DD7A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48326DF2131893900DD7A7C /* Assets.xcassets */; };
@@ -89,7 +88,6 @@
 		E4687CA72135C86C00B2992D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		E4687CA92135C89200B2992D /* BasketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsViewController.swift; sourceTree = "<group>"; };
 		E4687CAB2135CE7400B2992D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E47FC56F2137201200CF8F87 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 		E48326D52131893700DD7A7C /* foodsharing-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodsharing-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48326D82131893700DD7A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48326DA2131893700DD7A7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 			children = (
 				E4687C9F2133F30000B2992D /* ConversationView.swift */,
 				E405E8412139CAD600952FEC /* Subviews */,
-				E47FC56F2137201200CF8F87 /* ConversationViewModel.swift */,
 				E4687CA72135C86C00B2992D /* ConversationViewController.swift */,
 			);
 			path = Conversations;
@@ -376,7 +373,6 @@
 				E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */,
 				E4D90FDA213C69C200ED7385 /* Actions.swift in Sources */,
 				E4D90FE0213C79FC00ED7385 /* FSWebServiceCoders.swift in Sources */,
-				E47FC5702137201200CF8F87 /* ConversationViewModel.swift in Sources */,
 				E4687CA82135C86C00B2992D /* ConversationViewController.swift in Sources */,
 				E4687CA2213400F200B2992D /* RootViewController.swift in Sources */,
 				E48326D92131893700DD7A7C /* AppDelegate.swift in Sources */,

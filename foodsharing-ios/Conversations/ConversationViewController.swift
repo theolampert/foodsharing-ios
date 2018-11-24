@@ -11,7 +11,6 @@ import ReSwift
 
 
 class ConversationViewController: UIViewController, StoreSubscriber {
-    private var viewModel: ConversationViewModel = ConversationViewModel(webservice: FSWebService())
     private var conversationView: ConversationView = ConversationView()
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,8 +31,6 @@ class ConversationViewController: UIViewController, StoreSubscriber {
         conversationView.tableView.register(ConversationCell.self, forCellReuseIdentifier: ConversationCell.reuseIdentifier)
         conversationView.tableView.dataSource = self
         conversationView.tableView.delegate = self
-
-        viewModel.delegate = self
         store.dispatch(RequestConversations)
     }
     
@@ -43,15 +40,10 @@ class ConversationViewController: UIViewController, StoreSubscriber {
     }
 }
 
-extension ConversationViewController: ConversationsDelegate {
-    func messageViewPushed() {
-        navigationController?.pushViewController(MessageViewController(id: viewModel.messageView), animated: true)
-    }
-}
-
 extension ConversationViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        viewModel.pushMessageView(id: store.state.conversations[indexPath.row].id)
+        let id = store.state.conversations[indexPath.row].id
+        navigationController?.pushViewController(MessageViewController(id: id), animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
