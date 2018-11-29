@@ -12,12 +12,14 @@ struct Member: Decodable, Encodable {
     let email: String
     let geschlecht: String
     let name: String
+    let photo: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case email
         case geschlecht
         case name
+        case photo
     }
 }
 
@@ -31,14 +33,16 @@ struct MemberShort: Decodable, Encodable {
     }
 }
 
-struct Conversation: Decodable, Encodable {
+struct Conversation: Codable {
     let id: String
     let last: String
     let lastFoodsaverID: String
-    let lastMessage: String
+    let lastMessage: String?
     let lastTS: String
     let unread: String
-    let member: [Member]
+    let name: String?
+    
+    var member: [Member]
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -48,6 +52,29 @@ struct Conversation: Decodable, Encodable {
         case lastTS = "last_ts"
         case unread
         case member
+        case name
+    }
+    
+    /* MARK: Work around for backend bug needs a custom initialiser,
+     * see: https://gitlab.com/foodsharing-dev/foodsharing/merge_requests/592
+     */
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.id = try container.decode(String.self, forKey: .id)
+        self.last = try container.decode(String.self, forKey: .last)
+        self.lastFoodsaverID = try container.decode(String.self, forKey: .lastFoodsaverID)
+        self.lastMessage = try container.decodeIfPresent(String.self, forKey: .lastMessage)
+        self.lastTS = try container.decode(String.self, forKey: .lastTS)
+        self.unread = try container.decode(String.self, forKey: .unread)
+        self.name = try container.decodeIfPresent(String.self, forKey: .name)
+        
+        do {
+            self.member = try container.decode([Member].self, forKey: .member)
+        } catch DecodingError.typeMismatch {
+            self.member = []
+        }
+
     }
 }
 
@@ -74,6 +101,25 @@ struct ConversationDetail: Decodable, Encodable {
     enum CodingKeys: String, CodingKey {
         case member
         case messages
+    }
+}
+
+struct LoginStatus: Codable {
+    let status: Bool
+    
+    //MARK: Custom initialiser for cleaning up response
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        do {
+            let number = try container.decode(Int.self, forKey: .status)
+            if (number == 1) {
+                self.status = true
+            } else {
+                self.status = false
+            }
+        } catch DecodingError.typeMismatch {
+            self.status = false
+        }
     }
 }
 

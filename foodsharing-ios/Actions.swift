@@ -9,20 +9,8 @@ import ReSwift
 
 
 func RequestConversations(state: State, store: Store<State>) -> Action? {
-    // Display cached results first
-    if let cachedConversations = UserDefaults.standard.object(forKey: Constants.conversationsKey) {
-        store.dispatch(
-            ReceiveConversations(conversations: decodeCoversations(
-                withConversations: cachedConversations as! Data)!
-            )
-        )
-    }
-    // Fetch from the network and re-cache
     FSWebService().getConversations() { conversations in
         store.dispatch(ReceiveConversations(conversations: conversations))
-        UserDefaults.standard.set(
-            encodeCoversations(withConversations: conversations),
-            forKey: Constants.conversationsKey)
     }
     return nil
 }

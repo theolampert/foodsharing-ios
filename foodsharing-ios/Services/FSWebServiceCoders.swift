@@ -7,11 +7,10 @@
 //
 import Foundation
 
-
-func encodeCoversations(withConversations conversations: [Conversation]) -> Data? {
+func decodeLoginResponse(withStatus status: Data) -> LoginStatus? {
     do {
-        let jsonEncoder = JSONEncoder()
-        return try jsonEncoder.encode(conversations)
+        let jsonDecoder = JSONDecoder()
+        return try jsonDecoder.decode(LoginStatus.self, from: status)
     } catch let error {
         print(error.localizedDescription)
     }
