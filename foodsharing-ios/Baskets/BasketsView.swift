@@ -10,20 +10,13 @@ import UIKit
 
 import FlexLayout
 import PinLayout
-import RxCocoa
-import RxSwift
 
 class BasketsView: UIView {
     fileprivate let rootFlexContainer = UIView()
-    let label = UILabel()
-    let name: Variable<String> = Variable("Julia")
 
     init() {
         super.init(frame: .zero)
         backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        
-        name.asObservable()
-            .bind(to: label.rx.text)
 
         rootFlexContainer.backgroundColor = .white
         rootFlexContainer
@@ -31,11 +24,6 @@ class BasketsView: UIView {
             .justifyContent(.center)
             .alignItems(.center)
             .padding(10)
-            .define { (flex) in
-                flex
-                    .addItem(label)
-                    .marginBottom(100)
-        }
         
         addSubview(rootFlexContainer)
     }

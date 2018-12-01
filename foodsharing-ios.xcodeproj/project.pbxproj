@@ -20,6 +20,7 @@
 		E4687CA82135C86C00B2992D /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA72135C86C00B2992D /* ConversationViewController.swift */; };
 		E4687CAA2135C89200B2992D /* BasketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CA92135C89200B2992D /* BasketsViewController.swift */; };
 		E4687CAC2135CE7400B2992D /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4687CAB2135CE7400B2992D /* Style.swift */; };
+		E471047B21B33FDD006740C5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E471047A21B33FDD006740C5 /* Extensions.swift */; };
 		E48326D92131893700DD7A7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326D82131893700DD7A7C /* AppDelegate.swift */; };
 		E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326DA2131893700DD7A7C /* LoginViewController.swift */; };
 		E48326E02131893900DD7A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48326DF2131893900DD7A7C /* Assets.xcassets */; };
@@ -88,6 +89,7 @@
 		E4687CA72135C86C00B2992D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		E4687CA92135C89200B2992D /* BasketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsViewController.swift; sourceTree = "<group>"; };
 		E4687CAB2135CE7400B2992D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		E471047A21B33FDD006740C5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "foodsharing-ios/Extensions/Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		E48326D52131893700DD7A7C /* foodsharing-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodsharing-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48326D82131893700DD7A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48326DA2131893700DD7A7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				E405E8422139CAED00952FEC /* ConversationCell.swift */,
+				E471047A21B33FDD006740C5 /* Extensions.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -365,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E471047B21B33FDD006740C5 /* Extensions.swift in Sources */,
 				E4687CA02133F30000B2992D /* ConversationView.swift in Sources */,
 				E4D90FDE213C742700ED7385 /* FSWebServiceTypes.swift in Sources */,
 				E4D90FD6213BD8FE00ED7385 /* Store.swift in Sources */,

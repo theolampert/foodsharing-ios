@@ -15,6 +15,7 @@ class ConversationCell: UITableViewCell {
     
     fileprivate let nameLabel = UILabel()
     fileprivate let descriptionLabel = UILabel()
+    fileprivate let iconImageView = UIImageView(image: UIImage(named: "method"))
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -22,7 +23,7 @@ class ConversationCell: UITableViewCell {
         selectionStyle = .none
         separatorInset = .zero
         
-        let iconImageView = UIImageView(image: UIImage(named: "method"))
+        
         iconImageView.backgroundColor = UIColor(red:0.96, green:0.76, blue:0.32, alpha:1)
         
         nameLabel.font = UIFont.boldSystemFont(ofSize: 14)
@@ -55,7 +56,8 @@ class ConversationCell: UITableViewCell {
             nameLabel.flex.markDirty()
         }
         else if !conversation.member.isEmpty {
-            nameLabel.text = conversation.member[0].name
+            nameLabel.text = conversation.member[1].name
+            iconImageView.downloaded(from: "https://beta.foodsharing.de/images/50_q_" + conversation.member[1].photo!)
             nameLabel.flex.markDirty()
         }
         if let preview = conversation.lastMessage {

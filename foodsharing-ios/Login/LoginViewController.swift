@@ -84,9 +84,7 @@ class LoginViewController: UIViewController, StoreSubscriber {
     
     func showAlert(message: String) {
         let alert = UIAlertController(title: "Login Failure", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
-            
-        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default))
         self.present(alert, animated: true, completion: nil)
         store.dispatch(DisplayAlertMessage(alertMessage: ""))
     }
