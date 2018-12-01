@@ -1,24 +1,30 @@
 ## Foodsharing iOS
 
-A proof of concept foodsharing client written in swift.
+Foodsharing iOS client written in [Swift](https://en.wikipedia.org/wiki/Swift_(programming_language)).
 
 ### Requirements
 
 - OSX 10.14
 - Xcode 10.1
 - Swift 4.2.1
+- Carthage
 
 ### Installation
 
 ```shell
-git clone git@github.com:theolampert/foodsharing-ios.git
+git clone git@gitlab.com:foodsharing-dev/foodsharing-ios.git
 cd foodsharing-ios
-carthage update
+carthage update --platform iOS
 ```
 
-Open Xcode and load your built binaries from `/Carthage` into the project. Right now the application requires the foodsharing backend running locally due to some changes to the REST API, I intend to merge these upstream.
+Open Xcode and load your built binaries from `/Carthage` into the project.
+
+#### Setting up a backend
+
+You have two choices here, either run a local version of the foodsharing backend and update `Constants/Constant.swift` or work directly with either beta: `beta.foodsharing.de` or production `foodsharing.de` and update accordingly.
 
 ### UI
 
-The UI layout is done entirely programmatically using 'PinLayout' and 'FlexLayout' which are abstractions ontop of Facebook's yoga layout library.
+The UI layout is done entirely programmatically using [PinLayout](https://github.com/layoutBox/PinLayout) and [FlexLayout](https://github.com/layoutBox/FlexLayout) which are abstractions ontop of Facebook's yoga layout library.
+
 Storyboards and nib files are excluded completely.
