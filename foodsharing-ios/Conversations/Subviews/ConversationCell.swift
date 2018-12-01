@@ -45,12 +45,23 @@ class ConversationCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func truncateAtLineBreak(withString str: String) -> String {
+        return String(str.split(separator: "\n")[0])
+    }
+    
     func configure(conversation: Conversation) {
-        nameLabel.text = conversation.member[0].name
-        nameLabel.flex.markDirty()
-        
-        descriptionLabel.text = conversation.lastMessage
-        descriptionLabel.flex.markDirty()
+        if let name = conversation.name {
+            nameLabel.text = name
+            nameLabel.flex.markDirty()
+        }
+        else if !conversation.member.isEmpty {
+            nameLabel.text = conversation.member[0].name
+            nameLabel.flex.markDirty()
+        }
+        if let preview = conversation.lastMessage {
+            descriptionLabel.text = truncateAtLineBreak(withString: preview)
+            descriptionLabel.flex.markDirty()
+        }
     }
     
     override func layoutSubviews() {

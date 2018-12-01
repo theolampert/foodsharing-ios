@@ -9,5 +9,6 @@
 struct Constants {
     static let sessionCookie: String = "sessionCookie"
     static let conversationsKey: String = "conversations"
-    static let baseAPIUrl: String = "http://127.0.0.1:18080/api"
+    static let baseAPIUrl: String = "https://beta.foodsharing.de/api"
+    static let baseLegacyAPIUrl: String = "https://beta.foodsharing.de/xhrapp.php?app=api&m="
 }
