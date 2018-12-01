@@ -50,8 +50,8 @@ class ConversationCell: UITableViewCell {
     }
     
     func configure(conversation: Conversation) {
-        if conversation.name != nil {
-            nameLabel.text = conversation.name
+        if let name = conversation.name {
+            nameLabel.text = name
             nameLabel.flex.markDirty()
         }
         else if !conversation.member.isEmpty {
