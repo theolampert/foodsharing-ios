@@ -13,11 +13,14 @@ class MainViewController: UITabBarController {
         super.viewDidLoad()
 
         let conversationViewContoller = UINavigationController(rootViewController: ConversationViewController())
-        let conversationTab = UITabBarItem(tabBarSystemItem: .more, tag: 0)
+        let conversationTab = UITabBarItem()
+        conversationTab.image = UIImage(named: "Chat")
         conversationViewContoller.tabBarItem = conversationTab
         
         let basketsViewController = UINavigationController(rootViewController: BasketsViewController())
-        basketsViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 1)
+        let basketsTab = UITabBarItem()
+        basketsTab.image = UIImage(named: "Basket")
+        basketsViewController.tabBarItem = basketsTab
         
         let tabBarList = [conversationViewContoller, basketsViewController]
         viewControllers = tabBarList

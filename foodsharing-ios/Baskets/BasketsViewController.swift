@@ -14,11 +14,6 @@ class BasketsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Baskets"
-        
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1)) {
-            self.basketsView.name.value = "heello"
-        }
-
     }
     
     override func loadView() {
