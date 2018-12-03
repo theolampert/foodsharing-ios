@@ -32,6 +32,14 @@ class LoginView: UIView {
     }
     
     func setupLayout() {
+        // Constants
+        struct imageDimensions {
+            static let w = CGFloat(223)
+            static let h = CGFloat(106.5)
+        }
+        let inputHeight = CGFloat(40)
+        let margin = CGFloat(10)
+
         // Activity
         activityIndicator.frame = bounds
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
@@ -42,9 +50,9 @@ class LoginView: UIView {
         
         // Logo
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
-        iconImageView.heightAnchor.constraint(equalToConstant: 106.5).isActive = true
-        iconImageView.widthAnchor.constraint(equalToConstant: 223).isActive = true
-        iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -106.5).isActive = true
+        iconImageView.heightAnchor.constraint(equalToConstant: imageDimensions.h).isActive = true
+        iconImageView.widthAnchor.constraint(equalToConstant: imageDimensions.w).isActive = true
+        iconImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -imageDimensions.h).isActive = true
         iconImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         
         
@@ -54,10 +62,10 @@ class LoginView: UIView {
         emailInput.keyboardType = UIKeyboardType.emailAddress
         emailInput.autocapitalizationType = UITextAutocapitalizationType.none
         emailInput.translatesAutoresizingMaskIntoConstraints = false
-        emailInput.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
-        emailInput.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
-        emailInput.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: 10).isActive = true
-        emailInput.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        emailInput.leftAnchor.constraint(equalTo: leftAnchor, constant: margin).isActive = true
+        emailInput.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin).isActive = true
+        emailInput.topAnchor.constraint(equalTo: iconImageView.bottomAnchor, constant: margin).isActive = true
+        emailInput.heightAnchor.constraint(equalToConstant: inputHeight).isActive = true
         
         // Password Field
         passwordInput.placeholder = "Password"
@@ -65,10 +73,10 @@ class LoginView: UIView {
         passwordInput.isSecureTextEntry = true
         passwordInput.translatesAutoresizingMaskIntoConstraints = false
         passwordInput.translatesAutoresizingMaskIntoConstraints = false
-        passwordInput.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
-        passwordInput.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
-        passwordInput.topAnchor.constraint(equalTo: emailInput.bottomAnchor, constant: 10).isActive = true
-        passwordInput.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        passwordInput.leftAnchor.constraint(equalTo: leftAnchor, constant: margin).isActive = true
+        passwordInput.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin).isActive = true
+        passwordInput.topAnchor.constraint(equalTo: emailInput.bottomAnchor, constant: margin).isActive = true
+        passwordInput.heightAnchor.constraint(equalToConstant: inputHeight).isActive = true
         
         // Submit Button
         submitButton.backgroundColor = Style.apple
@@ -76,10 +84,10 @@ class LoginView: UIView {
         submitButton.translatesAutoresizingMaskIntoConstraints = false
         
         submitButton.translatesAutoresizingMaskIntoConstraints = false
-        submitButton.leftAnchor.constraint(equalTo: leftAnchor, constant: 10).isActive = true
-        submitButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -10).isActive = true
-        submitButton.topAnchor.constraint(equalTo: passwordInput.bottomAnchor, constant: 10).isActive = true
-        submitButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        submitButton.leftAnchor.constraint(equalTo: leftAnchor, constant: margin).isActive = true
+        submitButton.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin).isActive = true
+        submitButton.topAnchor.constraint(equalTo: passwordInput.bottomAnchor, constant: margin).isActive = true
+        submitButton.heightAnchor.constraint(equalToConstant: inputHeight).isActive = true
     }
     
     override func layoutSubviews() {
