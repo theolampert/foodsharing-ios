@@ -35,6 +35,5 @@ class MessageViewController: UIViewController {
 
 extension MessageViewController: MessageDelegate {
     func conversationDidChange() {
-        self.messageView.renderMessages(messages: viewModel.messages)
     }
 }

@@ -27,7 +27,6 @@ class ConversationViewController: UIViewController, StoreSubscriber {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         conversationView.tableView.register(ConversationCell.self, forCellReuseIdentifier: ConversationCell.reuseIdentifier)
         conversationView.tableView.dataSource = self
         conversationView.tableView.delegate = self

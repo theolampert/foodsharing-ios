@@ -25,6 +25,4 @@ You have two choices here, either run a local version of the foodsharing backend
 
 ### UI
 
-The UI layout is done entirely programmatically using [PinLayout](https://github.com/layoutBox/PinLayout) and [FlexLayout](https://github.com/layoutBox/FlexLayout) which are abstractions ontop of Facebook's yoga layout library.
-
-Storyboards and nib files are excluded completely.
+The UI layout is done entirely programmatically using Apple's AutoLayout. Storyboards and nib files are excluded completely.

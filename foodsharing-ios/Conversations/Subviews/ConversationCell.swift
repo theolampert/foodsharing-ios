@@ -11,35 +11,57 @@ import UIKit
 
 class ConversationCell: UITableViewCell {
     static let reuseIdentifier = "ConversationCell"
-    fileprivate let padding: CGFloat = 10
-    
+
+    fileprivate let avatarImage = UIImageView(image: UIImage(named: "method"))
     fileprivate let nameLabel = UILabel()
     fileprivate let descriptionLabel = UILabel()
-    fileprivate let iconImageView = UIImageView(image: UIImage(named: "method"))
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         selectionStyle = .none
         separatorInset = .zero
+
+        struct imageDimensions {
+            static let w = CGFloat(40)
+            static let h = CGFloat(40)
+        }
         
+        let margin = CGFloat(10)
         
-        iconImageView.backgroundColor = UIColor(red:0.96, green:0.76, blue:0.32, alpha:1)
-        
+        addSubview(avatarImage)
+        addSubview(nameLabel)
+        addSubview(descriptionLabel)
+
+        avatarImage.backgroundColor = UIColor(red:0.96, green:0.76, blue:0.32, alpha:1)
+    
+        avatarImage.frame = bounds
+        avatarImage.translatesAutoresizingMaskIntoConstraints = false
+        avatarImage.heightAnchor.constraint(equalToConstant: imageDimensions.h).isActive = true
+        avatarImage.widthAnchor.constraint(equalToConstant: imageDimensions.w).isActive = true
+        avatarImage.leftAnchor.constraint(equalTo: leftAnchor, constant: margin).isActive = true
+        avatarImage.topAnchor.constraint(equalTo: topAnchor, constant: margin).isActive = true
+
+        nameLabel.frame = bounds
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = UIFont.boldSystemFont(ofSize: 14)
         nameLabel.lineBreakMode = .byTruncatingTail
-        
+        nameLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: margin).isActive = true
+        nameLabel.topAnchor.constraint(equalTo: topAnchor, constant: margin).isActive = true
+
+        descriptionLabel.frame = bounds
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.font = UIFont.systemFont(ofSize: 12)
         descriptionLabel.numberOfLines = 0
-        
-        contentView.flex.padding(12).define { (flex) in
-            flex.addItem().direction(.row).define { (flex) in
-                flex.addItem(iconImageView).size(30)
-                flex.addItem(nameLabel).marginLeft(padding).grow(1)
-            }
-            
-            flex.addItem(descriptionLabel).marginTop(padding)
-        }
+        descriptionLabel.leftAnchor.constraint(equalTo: avatarImage.rightAnchor, constant: margin).isActive = true
+        descriptionLabel.rightAnchor.constraint(equalTo: rightAnchor, constant: -margin).isActive = true
+        descriptionLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: margin).isActive = true
+        descriptionLabel.widthAnchor.constraint(
+            equalTo: widthAnchor,
+            constant: -(imageDimensions.w + (margin * 3))
+        ).isActive = true
+
+        heightAnchor.constraint(equalTo: descriptionLabel.heightAnchor, constant: (imageDimensions.h + margin)).isActive = true
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -61,7 +83,7 @@ class ConversationCell: UITableViewCell {
         }
         else if !conversation.member.isEmpty {
             nameLabel.text = conversation.member[1].name
-            iconImageView.downloaded(from: "https://beta.foodsharing.de/images/50_q_" + conversation.member[1].photo!)
+            avatarImage.downloaded(from: "https://beta.foodsharing.de/images/130_q_" + conversation.member[1].photo!)
             nameLabel.flex.markDirty()
         }
         if let preview = conversation.lastMessage {
@@ -72,16 +94,9 @@ class ConversationCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layout()
-    }
-    
-    fileprivate func layout() {
-        contentView.flex.layout(mode: .adjustHeight)
     }
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
-        contentView.pin.width(size.width)
-        layout()
         return contentView.frame.size
     }
 }

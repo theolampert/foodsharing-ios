@@ -25,11 +25,7 @@
 		E48326DB2131893700DD7A7C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326DA2131893700DD7A7C /* LoginViewController.swift */; };
 		E48326E02131893900DD7A7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E48326DF2131893900DD7A7C /* Assets.xcassets */; };
 		E48326EE2131893900DD7A7C /* foodsharing_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326ED2131893900DD7A7C /* foodsharing_iosTests.swift */; };
-		E48326F921318ABE00DD7A7C /* FlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48326F821318ABE00DD7A7C /* FlexLayout.framework */; };
-		E48326FA21318ABE00DD7A7C /* FlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E48326F821318ABE00DD7A7C /* FlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E48326FD21318B1D00DD7A7C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E48326FC21318B1D00DD7A7C /* LoginView.swift */; };
-		E48326FF213190CF00DD7A7C /* PinLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48326FE213190CF00DD7A7C /* PinLayout.framework */; };
-		E4832700213190CF00DD7A7C /* PinLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E48326FE213190CF00DD7A7C /* PinLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E48327022131A73A00DD7A7C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48327012131A73A00DD7A7C /* Alamofire.framework */; };
 		E48327032131A73A00DD7A7C /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E48327012131A73A00DD7A7C /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E4BAF27C213D4690007747E4 /* BasketsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BAF27B213D4690007747E4 /* BasketsView.swift */; };
@@ -65,10 +61,8 @@
 			files = (
 				E4D90FE6213D3C4A00ED7385 /* RxCocoa.framework in Embed Frameworks */,
 				E4D90FE3213D3B0E00ED7385 /* RxSwift.framework in Embed Frameworks */,
-				E4832700213190CF00DD7A7C /* PinLayout.framework in Embed Frameworks */,
 				E4D90FD4213BD8DD00ED7385 /* ReSwift.framework in Embed Frameworks */,
 				E48327032131A73A00DD7A7C /* Alamofire.framework in Embed Frameworks */,
-				E48326FA21318ABE00DD7A7C /* FlexLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -98,9 +92,7 @@
 		E48326E92131893900DD7A7C /* foodsharing-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "foodsharing-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48326ED2131893900DD7A7C /* foodsharing_iosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodsharing_iosTests.swift; sourceTree = "<group>"; };
 		E48326EF2131893900DD7A7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E48326F821318ABE00DD7A7C /* FlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FlexLayout.framework; path = Carthage/Build/iOS/FlexLayout.framework; sourceTree = "<group>"; };
 		E48326FC21318B1D00DD7A7C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		E48326FE213190CF00DD7A7C /* PinLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PinLayout.framework; path = Carthage/Build/iOS/PinLayout.framework; sourceTree = "<group>"; };
 		E48327012131A73A00DD7A7C /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		E4BAF27B213D4690007747E4 /* BasketsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsView.swift; sourceTree = "<group>"; };
 		E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
@@ -120,10 +112,8 @@
 			files = (
 				E4D90FE5213D3C4A00ED7385 /* RxCocoa.framework in Frameworks */,
 				E4D90FE2213D3B0E00ED7385 /* RxSwift.framework in Frameworks */,
-				E48326FF213190CF00DD7A7C /* PinLayout.framework in Frameworks */,
 				E4D90FD3213BD8DD00ED7385 /* ReSwift.framework in Frameworks */,
 				E48327022131A73A00DD7A7C /* Alamofire.framework in Frameworks */,
-				E48326F921318ABE00DD7A7C /* FlexLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,8 +207,6 @@
 				E4D90FE1213D3B0E00ED7385 /* RxSwift.framework */,
 				E4D90FD2213BD8DC00ED7385 /* ReSwift.framework */,
 				E48327012131A73A00DD7A7C /* Alamofire.framework */,
-				E48326FE213190CF00DD7A7C /* PinLayout.framework */,
-				E48326F821318ABE00DD7A7C /* FlexLayout.framework */,
 				E48326D72131893700DD7A7C /* foodsharing-ios */,
 				E48326EC2131893900DD7A7C /* foodsharing-iosTests */,
 				E48326D62131893700DD7A7C /* Products */,
