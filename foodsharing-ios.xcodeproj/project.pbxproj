@@ -89,7 +89,7 @@
 		E4687CA72135C86C00B2992D /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 		E4687CA92135C89200B2992D /* BasketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketsViewController.swift; sourceTree = "<group>"; };
 		E4687CAB2135CE7400B2992D /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E471047A21B33FDD006740C5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "foodsharing-ios/Extensions/Extensions.swift"; sourceTree = SOURCE_ROOT; };
+		E471047A21B33FDD006740C5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = "foodsharing-ios/Extensions.swift"; sourceTree = SOURCE_ROOT; };
 		E48326D52131893700DD7A7C /* foodsharing-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "foodsharing-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E48326D82131893700DD7A7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E48326DA2131893700DD7A7C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -141,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				E405E8422139CAED00952FEC /* ConversationCell.swift */,
-				E471047A21B33FDD006740C5 /* Extensions.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -238,6 +237,7 @@
 		E48326D72131893700DD7A7C /* foodsharing-ios */ = {
 			isa = PBXGroup;
 			children = (
+				E471047A21B33FDD006740C5 /* Extensions.swift */,
 				E48326D82131893700DD7A7C /* AppDelegate.swift */,
 				E4D90FD5213BD8FE00ED7385 /* Store.swift */,
 				E4D90FDB213C6A2B00ED7385 /* Reducers.swift */,
