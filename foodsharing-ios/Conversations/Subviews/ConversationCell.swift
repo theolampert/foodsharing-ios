@@ -47,7 +47,11 @@ class ConversationCell: UITableViewCell {
     }
     
     func truncateAtLineBreak(withString str: String) -> String {
-        return String(str.split(separator: "\n")[0])
+        let lnbr: Character = "\n"
+        if str.contains(lnbr) {
+            return String(str.split(separator: lnbr)[0])
+        }
+        return str
     }
     
     func configure(conversation: Conversation) {

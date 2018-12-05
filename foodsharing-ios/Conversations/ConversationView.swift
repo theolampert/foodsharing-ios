@@ -16,10 +16,6 @@
 
 import UIKit
 
-import FlexLayout
-import PinLayout
-
-
 class ConversationView: UIView {
     private let activityIndicator = UIActivityIndicatorView(style: .gray)
     let tableView = UITableView()
@@ -36,6 +32,11 @@ class ConversationView: UIView {
     func configureView() {
         addSubview(tableView)
         addSubview(activityIndicator)
+        
+        tableView.frame = bounds
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
+        tableView.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
     }
     
     func layoutConversations (conversations: [Conversation]) {
@@ -44,8 +45,5 @@ class ConversationView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        tableView.pin.all()
-        activityIndicator.pin.all()
     }
 }
